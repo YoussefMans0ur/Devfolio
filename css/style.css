@@ -34,6 +34,12 @@ header {
     height: 100%;
     position: relative;
 }
+@media (max-width: 768px) {
+    header {
+        background-attachment: scroll; /* Disable fixed background on mobile */
+        background-size: cover; /* Adjust to ensure the image covers the area */
+    }
+}
 .header-content {
     z-index: 2;
 }
@@ -42,6 +48,14 @@ header {
 }
 .header-content h2 {
     font-size: 2.5rem;
+}
+@media (max-width: 1200px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+    .header-content h2 {
+        font-size: 1rem;
+    }
 }
 .header-content h2::after {
     content: '|';
